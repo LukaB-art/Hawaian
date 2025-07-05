@@ -6,11 +6,11 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-  font-family: sans-serif;
   background-color: #f9f9f9;
+  padding-top: 100px; /* აქ დავამატე ჰედერის ადგილი */
 }
 
+/* ... დანარჩენი უცვლელად ... */
 .site-header {
   position: fixed;
   width: 100%;
@@ -19,10 +19,9 @@ body {
   background: rgba(255, 255, 255, 0.596);
   z-index: 999;
   padding: 10px 0;
-  
-
 }
 
+/* აქედან უკვე იგივეა */
 .container {
   width: 90%;
   margin: 0 auto;
@@ -35,8 +34,6 @@ body {
 .logo img {
   height: 60px;
 }
-
-
 
 .main-nav ul {
   list-style: none;
@@ -91,7 +88,6 @@ body {
   }
 }
 
-
 .main-nav a:hover {
   color: #800020;
 }
@@ -110,7 +106,6 @@ body {
   background-color: #e65000;
 }
 
-/* მობილურისთვის */
 @media (max-width: 768px) {
   .main-nav ul {
     flex-direction: column;
@@ -131,30 +126,29 @@ body {
     align-items: flex-start;
   }
 }
- .logo {
-    border-radius: 75% ;
- }
 
- .banner img {
-    width: 100%;
-    height: 100vh ;   
-    display: block;
+.logo {
+  border-radius: 75% ;
+}
 
- }
+.banner img {
+  width: 100%;
+  height: 100vh ;   
+  display: block;
+}
 
- .about-container {
+.about-container {
   max-width: 500px;
   height: 80vh;
   margin: 50px auto;
   padding: 20px;
   background-color: white;
-  border: 2px solid #f8c3da; /* ღია ვარდისფერი ჩარჩო */
+  border: 2px solid #f8c3da;
   box-sizing: border-box;
-
 }
 
 .about-container h3 {
-  color: #800020; /* შინდისფერი */
+  color: #800020;
   text-align: center;
   font-weight: bold;
   margin-bottom: 20px;
@@ -173,46 +167,43 @@ body {
 }
 
 .list a {
-    font-size:large ;
-    font-weight: bold;
-    padding: 9px 12px;
-    background-color: #800020;
-    border-radius: 12px;
-    color: white;
-    translate: background 0.8s;
-
+  font-size:large ;
+  font-weight: bold;
+  padding: 9px 12px;
+  background-color: #800020;
+  border-radius: 12px;
+  color: white;
+  transition: background 0.8s;
 }
 
 .list a:hover {
-    background-color: #e65000;
-    transition: background 0.3s;
-    
+  background-color: #e65000;
+  transition: background 0.3s;
 }
 
 body {
-  margin: 0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #ffe6f0; /* ღია ვარდისფერი ფონზე */
+  background-color: #ffe6f0;
   color: #333;
 }
 
 header {
   text-align: center;
   padding: 40px 20px 20px 20px;
-  background-color: #ffb6c1; /* ღია ვარდისფერი */
+  background-color: #ffb6c1;
 }
 
 h1 {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #800020; /* შინდისფერი */
+  color: #800020;
 }
 
 .slogan {
   font-size: 24px;
   font-weight: bold;
-  color: #d1005d; /* ხასხასა ვარდისფერი */
+  color: #d1005d;
 }
 
 .photo-section {
@@ -232,7 +223,7 @@ h1 {
 }
 
 .second-slogan {
-  background-color: #ffccff; /* მოლურჯო-ვარდისფერი */
+  background-color: #ffccff;
   text-align: center;
   padding: 30px 20px;
   margin-top: 20px;
@@ -245,7 +236,7 @@ h1 {
 }
 
 .h1h2 {
-    padding: 85px 0px 20px 30px;
+  padding: 85px 0px 20px 30px;
 }
 
 .site-footer {
@@ -277,83 +268,3 @@ h1 {
 .social-icons img:hover {
   transform: scale(1.1);
 }
-
-/* 📱 მობილური ადაპტაცია */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 20px 0;
-    position: static;
-    background: none;
-    display: flex !important;
-  }
-
-  .call-btn {
-    margin-top: 15px;
-  }
-
-  .logo img {
-    height: 50px;
-  }
-
-  .photo-section {
-    flex-direction: column;
-    padding: 20px;
-    gap: 15px;
-  }
-
-  .photo-section img {
-    width: 90%;
-    max-width: 100%;
-  }
-
-  .h1h2 {
-    padding: 100px 20px 20px 20px;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  .slogan {
-    font-size: 18px;
-  }
-
-  .second-slogan h3 {
-    font-size: 18px;
-  }
-
-  .about-container {
-    width: 90%;
-    height: auto;
-    margin: 20px auto;
-  }
-
-  .main-nav {
-    width: 100%;
-  }
-
-  .list a {
-    display: block;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .social-icons {
-    flex-direction: row;
-    gap: 10px;
-  }
-}
-
-
