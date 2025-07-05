@@ -5,12 +5,12 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #ffe6f0;
+  color: #333;
   padding-top: 100px; /* აქ დავამატე ჰედერის ადგილი */
 }
 
-/* ... დანარჩენი უცვლელად ... */
 .site-header {
   position: fixed;
   width: 100%;
@@ -21,7 +21,6 @@ body {
   padding: 10px 0;
 }
 
-/* აქედან უკვე იგივეა */
 .container {
   width: 90%;
   margin: 0 auto;
@@ -33,6 +32,7 @@ body {
 
 .logo img {
   height: 60px;
+  border-radius: 75%;
 }
 
 .main-nav ul {
@@ -49,52 +49,12 @@ body {
 }
 
 .main-nav a:hover {
-  color: #ff6600;
-}
-
-.call-btn a {
-  background-color: #ff6600;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.call-btn a:hover {
-  background-color: #e65000;
-}
-
-/* მობილურისთვის */
-@media (max-width: 768px) {
-  .main-nav ul {
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.95);
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    display: none;
-  }
-
-  .main-nav.active ul {
-    display: flex;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.main-nav a:hover {
   color: #800020;
 }
 
 .call-btn a {
   background-color: #800020;
-  color: #FFFFFF ;
+  color: #FFFFFF;
   padding: 10px 15px;
   border-radius: 12px;
   text-decoration: none;
@@ -106,34 +66,9 @@ body {
   background-color: #e65000;
 }
 
-@media (max-width: 768px) {
-  .main-nav ul {
-    flex-direction: column;
-    background: rgb(255, 255, 255);
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    display: none;
-  }
-
-  .main-nav.active ul {
-    display: flex;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.logo {
-  border-radius: 75% ;
-}
-
 .banner img {
   width: 100%;
-  height: 100vh ;   
+  height: 100vh;
   display: block;
 }
 
@@ -167,7 +102,7 @@ body {
 }
 
 .list a {
-  font-size:large ;
+  font-size: large;
   font-weight: bold;
   padding: 9px 12px;
   background-color: #800020;
@@ -179,12 +114,6 @@ body {
 .list a:hover {
   background-color: #e65000;
   transition: background 0.3s;
-}
-
-body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #ffe6f0;
-  color: #333;
 }
 
 header {
@@ -267,4 +196,38 @@ h1 {
 
 .social-icons img:hover {
   transform: scale(1.1);
+}
+
+/* ------- დამატებები მობილურისთვის ------- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row; /* აღარ გადავდივართ column-ზე */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    height: 50px; /* ცოტა დავაპატარავე */
+  }
+
+  .main-nav ul {
+    gap: 15px; /* ცოტა შევამცირე */
+  }
+}
+
+/* შენარჩუნებულია მენიუს დამალვა/გახსნა */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .main-nav.active ul {
+    display: flex;
+  }
 }
