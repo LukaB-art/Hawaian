@@ -8,7 +8,7 @@ body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   background-color: #ffe6f0;
   color: #333;
-  padding-top: 100px; /* აქ დავამატე ჰედერის ადგილი */
+  padding-top: 100px;
 }
 
 .site-header {
@@ -27,12 +27,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: bold;
 }
 
 .logo img {
   height: 60px;
   border-radius: 75%;
+}
+
+/* აქ ახალი flex ჩანაწერი, რომ ლოგო + call-btn გვერდიგვერდ იყოს */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .main-nav ul {
@@ -71,6 +77,8 @@ body {
   height: 100vh;
   display: block;
 }
+
+/* ... დანარჩენი უცვლელად შენარჩუნებულია ... */
 
 .about-container {
   max-width: 500px;
@@ -198,25 +206,11 @@ h1 {
   transform: scale(1.1);
 }
 
-/* ------- დამატებები მობილურისთვის ------- */
+/* ------- მობილურისთვის ------- */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: row; /* აღარ გადავდივართ column-ზე */
-    align-items: center;
-    justify-content: space-between;
-  }
-
   .logo img {
-    height: 50px; /* ცოტა დავაპატარავე */
+    height: 50px;
   }
-
-  .main-nav ul {
-    gap: 15px; /* ცოტა შევამცირე */
-  }
-}
-
-/* შენარჩუნებულია მენიუს დამალვა/გახსნა */
-@media (max-width: 768px) {
   .main-nav ul {
     flex-direction: column;
     background: rgba(255, 255, 255, 0.95);
@@ -226,8 +220,10 @@ h1 {
     width: 100%;
     display: none;
   }
-
   .main-nav.active ul {
     display: flex;
+  }
+  .header-left {
+    gap: 10px;
   }
 }
